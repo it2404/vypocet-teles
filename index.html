@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Výpočet vzorců pro tělesa</title>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center py-3 mb-4 border-bottom">
+        <h1 class="text-start m-0 ms-4 hlavni-nadpis">Výpočet vzorců pro tělesa</h1>
+        <nav class="nav nav-pills">
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold; margin-left: 50px;" href="#domu">Domů</a>
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold;" href="#krychle">Krychle</a>
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold;" href="#kvadr">Kvádr</a>
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold;" href="#jehlan">Jehlan</a>
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold;" href="#hranol">Hranol</a>
+        <a class="nav-link navigace" style="color: green; font-size: 30px; font-weight: bold;" href="#koule">Koule</a>
+      </nav>
+    </header>
+    <main>
+        <section id="domu">
+            <p class="text-center uvod-nadpis">Vítejte na stránce pro výpočet vzorců pro tělesa. Zvolte těleso z navigačního menu výše.</p>
+        </section>
+
+        <div class="text-center" id="krychle">
+            <img src="./img/krychle.jpg" alt="Krychle">
+        </div>
+
+        <div class="container krychle">
+            <section class="text-center">
+                <h2 class="text-center nadpis-telesa">Krychle</h2>
+                <p class="text-center vzorce">Vzorce pro krychli:</p>
+                <ul class="vzorce text-center">
+                    <li>Objem (V) = a³</li>
+                    <li>Povrch (S) = 6a²</li>
+                </ul>
+                <input type="number" id="krychle-a" placeholder="Zadejte délku hrany a">
+                <button id="krychleBtn">Vypočítat</button>
+                <p>
+                    <strong>Výsledek objemu:</strong> <span id="krychle-objem"></span><br>
+                    <strong>Výsledek povrchu:</strong> <span id="krychle-povrch"></span>
+                    <br><br>
+                </p>
+            </section>
+        </div>
+
+        <div class="text-center" id="kvadr">
+            <img src="./img/kvadr.svg" alt="Kvádr">
+        </div>
+
+        <div class="container kvadr">
+            <section class="text-center">
+                <h2 class="text-center nadpis-telesa">Kvádr</h2>
+                <p class="text-center vzorce">Vzorce pro kvádr:</p>
+                <ul class="vzorce text-center">
+                    <li>Objem (V) = a * b * c</li>
+                    <li>Povrch (S) = 2(ab + ac + bc)</li>
+                </ul>
+                <input type="number" id="kvadr-a" placeholder="Zadejte délku a">
+                <input type="number" id="kvadr-b" placeholder="Zadejte délku b">
+                <input type="number" id="kvadr-c" placeholder="Zadejte délku c">
+                <button id="kvadrBtn">Vypočítat</button>
+                <p>
+                    <strong>Výsledek objemu:</strong> <span id="kvadr-objem"></span><br>
+                    <strong>Výsledek povrchu:</strong> <span id="kvadr-povrch"></span>
+                    <br><br>
+                </p>
+            </section>
+        </div>
+
+        <div class="text-center" id="jehlan">
+            <img src="./img/jehlan.gif" alt="Jehlan">
+        </div>
+
+        <div class="container jehlan">
+            <section class="text-center">
+                <h2 class="text-center nadpis-telesa">Jehlan (čtvercová podstava)</h2>
+                <p class="text-center vzorce">Vzorce pro jehlan:</p>
+                <ul class="vzorce text-center">
+                    <li>Objem (V) = (1/3) * a² * v</li>
+                    <li>Povrch (S) = a² + 2 * a * √((a/2)² + v²)</li>
+                </ul>
+                <input type="number" id="jehlan-a" placeholder="Zadejte délku hrany podstavy a">
+                <input type="number" id="jehlan-vyska" placeholder="Zadejte výšku v">
+                <button id="jehlanBtn">Vypočítat</button>
+                <p>
+                    <strong>Výsledek objemu:</strong> <span id="jehlan-objem"></span><br>
+                    <strong>Výsledek povrchu:</strong> <span id="jehlan-povrch"></span>
+                    <br><br>
+                </p>
+            </section>
+        </div>
+
+        <div class="text-center" id="hranol">
+            <img src="./img/hranol.png" width="300px" alt="Hranol">
+        </div>
+
+        <div class="container hranol">
+            <section class="text-center">
+                <h2 class="text-center nadpis-telesa">Hranol (čtvercová podstava)</h2>
+                <p class="text-center vzorce">Vzorce pro hranol:</p>
+                <ul class="vzorce text-center">
+                    <li>Objem (V) = a² * v</li>
+                    <li>Povrch (S) = 2 * a² + 4 * a * v</li>
+                </ul>
+                <input type="number" id="hranol-a" placeholder="Zadejte délku hrany podstavy a">
+                <input type="number" id="hranol-v" placeholder="Zadejte výšku v">
+                <button id="hranolBtn">Vypočítat</button>
+                <p>
+                    <strong>Výsledek objemu:</strong> <span id="hranol-objem"></span><br>
+                    <strong>Výsledek povrchu:</strong> <span id="hranol-povrch"></span>
+                    <br><br>
+                </p>
+            </section>
+        </div>
+
+        <div class="text-center" id="koule">
+            <img src="./img/koule.png" width="300px" alt="Koule">
+        </div>
+
+        <div class="container koule">
+            <section class="text-center">
+                <h2 class="text-center nadpis-telesa">Koule</h2>
+                <p class="text-center vzorce">Vzorce pro kouli:</p>
+                <ul class="vzorce text-center">
+                    <li>Objem (V) = (4/3)πr³</li>
+                    <li>Povrch (S) = 4πr²</li>
+                </ul>
+                <input type="number" id="koule-r" placeholder="Zadejte poloměr r">
+                <button id="kouleBtn">Vypočítat</button>
+                <p>
+                    <strong>Výsledek objemu:</strong> <span id="koule-objem"></span><br>
+                    <strong>Výsledek povrchu:</strong> <span id="koule-povrch"></span>
+                    <br><br>
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./js/vypocty.js"></script>
+    
+  </body>
+</html>
